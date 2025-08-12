@@ -37,31 +37,26 @@ Accumulate sum in a variable
 #include <stdio.h>
 
 int main() {
-/*Read an integer n from input (how many numbers to process).
+/*Ask the user how many numbers they want to sum (read n).
 
-Read n integers, one by one.
+Read n numbers one by one.
 
-For each number, check if it is odd.
+Calculate the sum of all those numbers.
 
-Keep a count of odd numbers.
-
-After processing, print the count.
+Print the final sum.
 */
     int input = 0;
-    int count = 0;
-    int odd = 0;
+    int var = 0;
+    int sum = 0;
 
     printf("how many numbers do you want: ");
     scanf_s("%d", &input);
 
     for (int i = 0;i < input;i++) {
         printf("enter number %d:", i + 1);
-        scanf_s("%d", &odd);
-        if (odd % 2 != 0) {
-            count++;
-        }
+        scanf_s("%d", &var);
+        sum += var;
     }
-    printf("the number of odd numbers from the list is:%d", 
-        count);
+    printf(" the sum of all of the numbers is %d:", sum);
 
 }
