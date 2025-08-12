@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\esmai\source\repos\Project1\main.c(28,41): warning C4013: '_countof' undefined; assuming extern returning int
+main.obj : error LNK2019: unresolved external symbol _countof referenced in function main
+C:\Users\esmai\source\repos\Project1\x64\Debug\Project1.exe : fatal error LNK1120: 1 unresolved externals
