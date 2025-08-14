@@ -1,4 +1,4 @@
-#hello and welcome to laith's zoo
+#hello and welcome to laith's zoo and omar's zoo
 dinosaur = {}
 
 def deleteDino():
