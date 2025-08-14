@@ -1,3 +1,4 @@
+#hello and welcome to laith's zoo
 dinosaur = {}
 
 def deleteDino():
@@ -26,7 +27,6 @@ def updateDino():
           print(f"now {name} is {age} years old")
     else:
         print("the dino does not exist")
-
 
 '''
 search by name 
