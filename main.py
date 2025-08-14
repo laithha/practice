@@ -40,12 +40,14 @@ def searchByName():
         print("the dino that you wrote is not in the zoo")
 
 while True:
+    print("WELCOME TO LAITH'S ZOO")
     print("1.Add dinosaur")
     print("2.List all dinos in the zoo")
     print("3.delete dino by name")
     print("4.update dino's age")
     print("5.search by name")
-    print("6.exit")
+    print("6.How many dino's do we have in this zoo")
+    print("7.exit")
     choice = int(input("choose: "))
     if choice == 1:
         Adddino()
@@ -58,4 +60,7 @@ while True:
     elif choice == 5:
         searchByName()
     elif choice == 6:
+        nums = len(dinosaur)
+        print(f"there is {nums} number of dinos in the zoo ")
+    elif choice == 7:
         break
