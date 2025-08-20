@@ -43,7 +43,7 @@ def searchitem():
         print("the item is not in the database")
 
 while True:
-    print("WELCOME TO LAITH'S SCHOOL")
+    print("WELCOME TO LAITH'S shopping manager")
     print("1.Add item")
     print("2.List all items")
     print("3.delete item")
