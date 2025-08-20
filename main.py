@@ -1,66 +1,58 @@
-#hello and welcome to laith's zoo and omar's zoo
-dinosaur = {}
 
-def deleteDino():
-    name = input("what is the name of the dino that you want to delete:")
-    if name in dinosaur:
-         dinosaur.pop(name)
+grade = []
+
+def deletegrade():
+    score = int(input("enter the grade that you want to delete:"))
+    if score in grade:
+          grade.remove(score)
     else:
-         print("the dinosaur does not exist in the zoo")
+        print("the student is not in the database")
 
-def Adddino():
-        key = input("Enter name: ")
-        value = input("Enter age: ")
-        dinosaur.setdefault(key, value)
-        print(dinosaur)
+def addgrade():
+        score = int(input("enter the grade"))
+        grade.append(score)
+        print(grade)
 
-def listDinosaurs ():
-    if not dinosaur:
-            print("there is no dino's in the database")
-    print(dinosaur)
+def listgrades ():
+    if not grade:
+            print("there is no scores in the database")
+    print(grade)
 
-def updateDino():
-    name = input("what is the dino's name that you want to update: ")
-    if name in dinosaur:
-          age = int(input("new age:"))
-          dinosaur[name] = age
-          print(f"now {name} is {age} years old")
+def updatescore():
+    score = int(input("what is the grade that you want to update: "))
+    if score in grade:
+          score1 = int(input("new grade:"))
+          score2 = grade.index(score)
+          grade[score2] = score1
     else:
-        print("the dino does not exist")
+        print("the student does not exist")
 
-'''
-search by name 
-at first add a dino in the zoo then search by name it should display the name and the age of that dino that you wrote 
-'''
 def searchByName():
-    name = input("enter the name of the dino that you want to search about:")
-    if name in dinosaur:
-        print("Name:", name, "Age:", dinosaur[name])
+    name = input("enter the name of the student that you want to search about")
+    if name in grade:
+        print("Name:", name, "grade:", grade[name])
     else:
-        print("the dino that you wrote is not in the zoo")
+        print("the student that you wrote is not in the database")
+
 
 while True:
-    print("WELCOME TO LAITH'S ZOO")
-    print("1.Add dinosaur")
-    print("2.List all dinos in the zoo")
-    print("3.delete dino by name")
-    print("4.update dino's age")
-    print("5.search by name")
-    print("6.How many dino's do we have in this zoo")
-    print("7.exit")
+    print("WELCOME TO LAITH'S SCHOOL")
+    print("1.Add score")
+    print("2.List all score")
+    print("3.delete score")
+    print("4.update score ")
+    print("5.search for a score")
+    print("6.exit")
     choice = int(input("choose: "))
     if choice == 1:
-        Adddino()
+        addgrade()
     elif choice == 2:
-        listDinosaurs()
+        listgrades()
     elif choice == 3:
-         deleteDino()
+         deletegrade()
     elif choice == 4:
-         updateDino()
+         updatescore()
     elif choice == 5:
         searchByName()
     elif choice == 6:
-        nums = len(dinosaur)
-        print(f"there is {nums} number of dinos in the zoo ")
-    elif choice == 7:
         break
