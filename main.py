@@ -1,9 +1,16 @@
-nums = [2, 4, 3, 5, 1, 6]
-target = 7
+from collections import Counter
+from typing import List
+
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        seen = set()
+        for num in nums:
+            if num in seen:
+                return True
+            seen.add(num)
+        return False
 
 
-
-for i in range(len(nums)):
-    for j in range(i + 1, len(nums)):
-        if nums[i] + nums[j] == target:
-            print(f"({nums[i]}, {nums[j]})")
+if __name__ == "__main__":
+    s = Solution()
+    print(s.hasDuplicate([1, 2, 3, 1]))
